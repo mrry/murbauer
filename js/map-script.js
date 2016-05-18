@@ -53,14 +53,35 @@
 		
 		//ADD NEW MARKER WITH LABEL
 		//=======================================================================================
+
+
+		var marker1 = new google.maps.Marker({
+			position: new google.maps.LatLng(37.787802, -122.408812),
+			map: map,
+			title: "Bus pick-up"
+		    });
+
+		var marker2 = new google.maps.Marker({
+			position: new google.maps.LatLng(37.791878, -122.458552),
+			map: map,
+			title: "Ceremony",
+		    });
+
+		var marker3 = new google.maps.Marker({
+			position: new google.maps.LatLng(37.7605152, -122.4233867),
+			map: map,
+			title: "Reception",
+		    });
+
+		/*
 		var marker1 = new MarkerWithLabel({
-       		position: new google.maps.LatLng(37.7879938, -122.4074374),
+		position: new google.maps.LatLng(37.787802, -122.408812),
        		draggable: false,
        		raiseOnDrag: false,
        		icon: ' ',
        		map: map, 
          	labelContent: '<div class="de-icon circle small-size" style="background-color:#6a6a6a"><i class="de-icon-taxi"></i></div>',
-       		labelAnchor: new google.maps.Point(29, 20),
+       		//labelAnchor: new google.maps.Point(29, 20),
        		labelClass: "labels" // the CSS class for the label
      		});
 
@@ -71,7 +92,7 @@
        		icon: ' ',
        		map: map, 
          	labelContent: '<div class="de-icon circle small-size" style="background-color:#FFF; border:1px solid #f0394d"><i class="de-icon-heart" style="color:#f0394d"></i></div>',
-       		labelAnchor: new google.maps.Point(29, 20),
+       		//labelAnchor: new google.maps.Point(29, 20),
        		labelClass: "labels" // the CSS class for the label
      		});
 		
@@ -82,22 +103,22 @@
        		icon: ' ',
        		map: map, 
          	labelContent: '<div class="de-icon circle small-size" style="background-color:#67a80e"><i class="de-icon-food"></i></div>',
-       		labelAnchor: new google.maps.Point(29, 20),
+			//labelAnchor: new google.maps.Point(29, 20),
        		labelClass: "labels" // the CSS class for the label
      		});
-		
+		*/
 		//INFO WINDOWS
 		//=======================================================================================
 		var contentString = '<div>'+
-		'Bus pick-up';
+		'<b>Bus leaves at 2:30 PM</b><br/>Westin St. Francis Hotel<br/>Post Street at Powell';
       	'</div>';
 		
 		var contentString1 = '<div>'+
-		'Ceremony';
+		'<b>Ceremony at 3:30 PM</b><br/>Inspiration Point';
       	'</div>';
 
 		var contentString2 = '<div>'+
-		'Reception';
+		'<b>Reception</b><br/>The Chapel<br/>777 Valencia St.';
       	'</div>';
 
  	 	var infowindow = new google.maps.InfoWindow({
@@ -127,7 +148,7 @@
     		map.setCenter(marker.getPosition());
 			infowindow.open(map,marker);
   		});*/
-		
+		/*
 		google.maps.event.addListener(marker1, 'click', function() {
 			infowindow.open(map,marker1);
    	 		//map.setZoom(17);
@@ -145,7 +166,7 @@
 			//map.setCenter(marker.getPosition());
 			infowindow2.open(map,marker3);
   		});
-		
+		*/
 		//ON BOUND EVENTS AND WINDOW RESIZE
 		//=======================================================================================
 		google.maps.event.addListener(map, 'bounds_changed', function() {  		
